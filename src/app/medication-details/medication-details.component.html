@@ -1,0 +1,21 @@
+<p>medication-details works!</p>
+
+<h2>Medication Details</h2> 
+
+<hr/>
+<div *ngIf="medication">
+  <div>
+    <label><b>Name: </b></label> {{medication.name}}
+  </div>
+  <div>
+    <label><b>Description: </b></label> {{medication.desc}}
+  </div>
+  <div>
+    <label><b>Date: </b></label> {{medication.date_taken}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Medication List</button><br>
+

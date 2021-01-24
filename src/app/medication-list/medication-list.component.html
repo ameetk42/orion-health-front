@@ -1,0 +1,28 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Medication List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let medication of medication | async">
+            <td>{{medication.name}}</td>
+            <td>{{medication.desc}}</td>
+            <td>{{medication.date_taken}}</td>
+            <td><button (click)="deleteMedication(medication.med_id)" class="btn btn-danger">Delete</button>
+                <button (click)="medicationDetails(medication.med_id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

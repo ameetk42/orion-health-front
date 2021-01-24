@@ -1,0 +1,28 @@
+<p>create-medication works!</p>
+
+<h3>Create Medication</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="medication.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Description</label>
+      <input type="text" class="form-control" id="desc" required [(ngModel)]="medication.desc" name="desc">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Date</label>
+      <input type="date" class="form-control" id="date_taken" required [(ngModel)]="medication.date_taken" name="date_taken">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+ 
+</div>
